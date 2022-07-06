@@ -1,89 +1,108 @@
-.App {
+body{
+  background: #202629;
+  color: #fff;
+}
+
+.row{
+  padding: 5rem;
+}
+
+.App{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.App-logo{
+  height: 100px;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white;  
+  width: 100%;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-  /* App */
-  body {
-    background: #202629;
-}
-
-.App {
-    text-align: center;
-}
-
-.App-logo {
-    height: 100px;
-    pointer-events: none;
-}
-
-.App-header {
-    background-color: #282c34;
-    min-height: 10vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-
-
-
 /* Weather */
 .weather.card {
-    margin-top:4vh;
+  margin-top: 2vh;
 }
 
 .weather.card .card-content {
-    background: #0b0829;
+  background: #0b0829;
 }
 
 .weather.card .card-action {
-    background: #120944;
+  background: #120944;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  color: #c18d42;
+}
+
+a{
+  color: #c87242;
+  text-decoration: none;
+}
+
+.weather.card .card-action .Active {
+  color: #fea841;
 }
 
 .weather .temperature {
-    margin-left:4vh;
-    font-size:120px;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: -1px 0 #61dafb, 0 1px #61dafb, 1px 0 #61dafb, 0 -1px #61dafb;
+  margin-left: 4vh;
+  font-size: 120px;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: -1px 0 #61dafb, 0 1px #61dafb, 1px 0 #61dafb, 0 -1px #61dafb;
+}
+
+.weather .wind{
+  padding: 2rem;
+}
+
+
+.loader{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
